@@ -1,0 +1,207 @@
+
+{% extends "base.html" %}
+
+<!-- Bootstrap CSS -->
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href={% static "prediction\css\stylehelp.css" %}>
+  
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="faq ">
+  <p>
+
+    <button class="btn btn-primary " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      How To Use Website?
+    </button>
+    <br>
+  
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body , shadow-dreamy">
+     <h4>Step 1: Firstly,Enter The Required State, Variety, Year, Month for Prediction of cotton.</h3>  
+       <img src={% static "prediction\images\cotton_1.png" %} alt="Required Inputs" height="50%" width="50%">
+      <br>
+     <h4>Step 2: After Entering Required Details Click On Predict Button.</h4> 
+      <img src={% static "prediction\images\cotton_2.png" %} alt="Click on Predict button" height="50%" width="50%">
+      <br>
+      <h4>Step 3: Now You Can See The Predicted Price And Graph Of Trends In cotton Price Of Selected State,Variety,Month,Year.    </h4>   
+       <img src={% static "prediction\images\cotton_3.png" %} alt="Predicted Price and Graph" height="50%" width="50%">
+      <br>
+      <h4>    step 4: You Can See The Trends In Cotton Prices Over The Years Bar/Line Graph By Choosing Specific Graph View. </h4>
+      <img src={% static "prediction\images\cotton_4.png" %} alt="Graph View" height="50%" width="50%">
+    </div>
+  </div>
+  <br>
+  <p>
+  
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+      What Purpose Of This Website?
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample1">
+    <div class="card card-body , shadow-dreamy">
+        The Main Purpose Of This Website Is To Give Farmers Basic Idea About What Price They Can Expect From Cotton Crop Before Cultivation/Sowing. <br> So That, If Predicted Price Is Less Than What They Are Expecting To Get After Harvesting, Then They Can Decide Whether To Go With<br> Production Of Cotton Crop Or Produce Some Other Crop Which Gives Better Exchange For Their Efforts. 
+    </div>
+  </div>
+  <br>
+  
+  
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+      Why My Variety Is Not In The List?
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample2">
+    <div class="card card-body , shadow-dreamy">
+        Because of Data Unavailability Of Various Varieties Of Cotton.<br>We Have Given Only Those Varieties Whose Data Was Available to Us During Building This Website. <br>Sorry For Inconvenience.
+    </div>
+  </div>
+  <br>
+  
+  
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+      Why Website Not Giving Option For Choosing All States In INDIA?
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample3">
+    <div class="card card-body , shadow-dreamy">
+        Because of Data Unavailability Of Various States And Also Cotton Is Produced Majorly In Only 10-11 States Of INDIA. <br>Thats Why We Got Data For Only Those States Which Are Majorly Producing Cotton. <br>So We Have Given Only Those States Whose Data Was Available to Us During Building This Website.<br>Sorry For Inconvenience.
+    </div>
+  </div>
+  <br>
+  
+  
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+      Majorly Produced Varieties With Description
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample4">
+    <div class="card card-body , shadow-dreamy">
+        <h1>Cotton Variety Details</h1>
+        
+            <table align="center" border="2px">
+            <tr>
+                <th>SR. NO.</th>
+                <th>Variety Of Cotton</th>
+                <th>Special Features</th>
+                <th>Duration(Days)</th>
+            </tr>
+    
+    
+            <tr>
+                <td>1</td>
+                <td>M.E.C.H.-1</td>
+                <td>Few monopodial branches. Rest fruiting branches.</td>
+                <td>170</td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>H-4</td>
+                <td>Non photosensitive,first hybrid, very high yielder.</td>
+                <td>220</td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>H-6</td>
+                <td>Shorter duration than H-4</td>
+                <td>200</td>
+            </tr>
+    
+    
+            <tr>
+                <td>4</td>
+                <td>MCU 5</td>
+                <td>Extra long staple
+                    (29 mm MHL),
+                    Can spun upto 70s, ginning 34%</td>
+                    <td>165</td>
+            </tr>
+    
+            <tr>
+                <td>5</td>
+                <td>MCU 7</td>
+                <td>	Medium staple
+                    (23.7 mm MHL), Can spun upto 30s, early maturing with 33.2% ginning outturn. Tolerant to Black arm</td>
+                    <td></td>
+            </tr>
+    
+            <tr>
+                <td>6</td>
+                <td>MCU 12</td>
+                <td>	Shorter in duration than MCU 5, GOT 34.8%
+                    Can spun upto 50s</td>
+                    <td></td>
+            </tr>
+    
+            <tr>
+                <td>7</td>
+                <td>MCU 13</td>
+                <td>Early duration
+                    Can spun upto 50s</td>
+                    <td></td>
+            </tr>
+    
+            <tr>
+                <td>8</td>
+                <td>LRA </td>
+                <td>Medium staple
+                    (29 mm), Can spun upto 40s, ginning 36.2%</td>
+                    <td>180</td>
+                    
+            </tr>
+    
+            <tr>
+                <td>9</td>
+                <td>Surabhi</td>
+                <td>Exta long staple, Verticillium wilt resistant</td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td>10</td>
+                <td>Suvin</td>
+                <td>Extra long staple cotton with 28% ginning outturn and 32 mm MHL, spins 100s</td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td>11</td>
+                <td>Y-1</td>
+                <td>Deep rooted and can tolerate drought condition better.</td>
+                <td>210</td>
+            </tr>
+    
+            <tr>
+                <td>12</td>
+                <td>Jayadhar</td>
+                <td>Unlike hybrid cotton, this strain does not require too much water or pesticide.</td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td>13</td>
+                <td>H-420</td>
+                <td>has fibre length less than an inch.</td>
+                <td>210</td>
+            </tr>
+            </table>
+        
+    </div>
+  </div>
+  <br>
+  
+</div>
+       
+ 
+{% endblock %}

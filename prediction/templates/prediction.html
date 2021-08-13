@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title></title>
+   <style>
+     .chart-container{
+
+       width:700px;
+       height: 500px;
+       margin: auto;
+       
+       
+     }
+     
+    
+      
+     .shadow-4{box-shadow:0 1px 1px rgba(0,0,0,0.15),0 2px 2px rgba(0,0,0,0.15),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.15)}.shadow-5{box-shadow:0 1px 1px rgba(0,0,0,0.12),0 2px 2px rgba(0,0,0,0.12),0 4px 4px rgba(0,0,0,0.12),0 8px 8px rgba(0,0,0,0.12),0 16px 16px rgba(0,0,0,0.12)}.shadow-6{box-shadow:0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 8px 8px rgba(0,0,0,0.11),0 16px 16px rgba(0,0,0,0.11),0 32px 32px rgba(0,0,0,0.11)}.shadow-sharp{box-shadow:0 1px 1px rgba(0,0,0,0.25),0 2px 2px rgba(0,0,0,0.2),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.1),0 16px 16px rgba(0,0,0,0.05)}.shadow-diffuse{box-shadow:0 1px 1px rgba(0,0,0,0.08),0 2px 2px rgba(0,0,0,0.12),0 4px 4px rgba(0,0,0,0.16),0 8px 8px rgba(0,0,0,0.2)}.shadow-dreamy{box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)}.shadow-shorter{box-shadow:0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11)}.shadow-longer{box-shadow:0 2px 1px rgba(0,0,0,0.09),0 4px 2px rgba(0,0,0,0.09),0 8px 4px rgba(0,0,0,0.09),0 16px 8px rgba(0,0,0,0.09),0 32px 16px rgba(0,0,0,0.09)}
+      .size{
+        height: 400px;
+        width: 800px;
+      
+        margin-top: 100px;
+        margin-right: 5px;
+        margin-left: 10px;
+
+      }
+
+      .card-size-1{
+         
+        height: 300px;
+        width: 350px;
+        margin-top: 70px;
+
+      }   
+      .card-size-2{
+         
+         height: 70px;
+         width: 350px;
+         margin-top: 20px;
+ 
+       }
+ 
+
+
+      .Graph-type-card-size{
+        height: 170px;
+        width: 300px;
+        margin-top: 100px;
+
+      }
+
+      .graph-input{
+        width: 250px;
+      }
+
+      
+   </style>
+  </head>
+  <body>
+   <!-- navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="\" style="font-size:x-large; font-style: italic; background-color: rgb(105, 103, 103); ">Kissan Yug</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      
+    </div>
+       <div class ="float-right ">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0  float-right">
+            <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="\" style="margin-right: 10px; width: 100px;font-size:20px; " >Home</a>
+              </li>
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="minmax" style="margin-right: 10px; width: 100px;font-size:20px; ">Min-Max</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="help"style= "margin-right: 10px;width: 100px; font-size:20px; " >Help</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="download" style= "margin-right: 10px;width: 100px; font-size:20px; ">Download</a>
+          </li>
+
+          
+           
+          
+         
+        
+          
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+           -->
+        </ul>
+        
+      </div>
+      </div>
+    </div>
+  </nav>
+  
+     
+    <div class="container-fluid">
+
+      <div class="row" >
+        <div class="col-8" >
+          <div class="shadow-dreamy  size ">
+
+            <div class="chart-container">
+              <canvas id="charts"></canvas>
+             </div>
+           </div>
+        
+        </div>
+
+
+         <div class ="col-4" > 
+
+           <div class="row">
+            <div class="shadow-dreamy card-size-1 ">
+              <div class="pred">
+              <h6 style="font-size: 180%;">Cotton Price Prediction </h6> 
+              
+              <table class="table">
+                
+                <tbody>
+                  <tr>
+                    <td style="font-size: 120%;">State</td>
+                    <td style="font-size: 120%;" id="state-label">{{State}}</td>
+                    
+                  </tr>
+                  <tr>
+                    <td style="font-size: 120%;">Variety </td>
+                    <td style="font-size: 120%;">{{variety}}</td>
+                    
+                  </tr>
+                  <tr>
+                    
+                    <td style="font-size: 120%;">Month</td>
+                    <td style="font-size: 120%;">{{month_for_html}}</td>
+                    
+                  </tr>                
+                  <tr>
+                    
+                    <td style="font-size: 120%;">Year</td>
+                    <td style="font-size: 120%;">{{year}}</td>
+                    
+                  </tr>
+
+                  <tr>
+                    
+                    <td style="font-size: 200%; ">Price</td>
+                    <td style="font-size: 200%; color: rgba(78, 115, 223, 1);">{{predicted_value}}</td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+
+               </div>
+               
+            </div>
+
+           </div>                      
+           
+           <div class="row">
+            <div class="shadow-dreamy Graph-type-card-size ">
+              <h1>Graph</h1>
+              
+
+                <select class="form-select  graph-input" aria-label="Default select example" id="mySelect" >
+                  
+                  <option  value="bar">bar</option>
+                  <option selected  value="line" >line</option>
+
+                </select>  
+                <br>
+                
+                  <button  class="shadow-dreamy btn btn-primary" onclick="updategraph()" style="margin-left: 30px; "> show</button>
+
+                
+                <br>
+              
+               
+            </div>
+
+           </div>
+         
+        </div>
+
+        
+      </div>
+     </div>
+
+     <script>
+
+      function updategraph(){
+        var x = document.getElementById("mySelect").value;
+        var color_value ;
+        if (x == "line") {
+          color_value = "rgba(78, 115, 223, 0.09)";
+          
+        } else {
+          color_value = "rgba(78, 115, 223, 1)";
+        }
+        
+        allCharts.destroy();
+        allCharts = new Chart(mychart,{
+       type : x ,                   //{{chartcategories|safe}} ,
+       data:{
+          labels : {{labels|safe}} ,
+          datasets:
+          [{
+              label: '{{State}}-{{variety}}',
+                
+              lineTension: 0.3,
+              backgroundColor: color_value,
+              borderColor: "rgba(78, 115, 223, 1)",
+              pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 10,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data:{{data}}
+      
+      }]
+      },
+      options:{
+       
+     }
+
+    });
+
+   
+
+        
+      };
+
+
+       var mychart = document.getElementById("charts").getContext('2d');
+       
+       var allCharts = new Chart(mychart,{
+       type :  'line'      ,                   //{{chartcategories|safe}} ,
+       data:{
+          labels : {{labels|safe}} ,
+          datasets:
+          [{
+              label: '{{State}}-{{variety}}',
+                
+              lineTension: 0.3,
+              backgroundColor: "rgba(78, 115, 223, 0.09)",
+              borderColor: "rgba(78, 115, 223, 1)",
+              pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 10,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data:{{data}}
+      
+      }]
+      },
+      options:{
+       
+     }
+
+    });
+    
+      </script>
+  </body>
+</html>

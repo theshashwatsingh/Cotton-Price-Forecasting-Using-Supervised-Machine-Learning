@@ -1,0 +1,91 @@
+/* body {
+  background-color: lightgrey;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../images/cotton1.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.login-box {
+  float: right;
+  margin-top: 50px;
+  width: 360px;
+  height: 560px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  /* top: 50%;
+  left: 50%; */
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  box-sizing: border-box;
+  padding: 40px 30px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: darkorange;
+}
+.fs-1 {
+  color: darkorange;
+}
+
+.btn {
+  color: rgb(238, 231, 224);
+  background-color: darkorange;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+p.solid {
+  border-style: solid;
+  padding: 10px 10px 10px 10px;
+  margin-top: 50px;
+  width: 390px;
+  height: fit-content;
+  background: darkorange;
+  color: #fff;
+  /* top: 50%;
+  left: 50%; */
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  box-sizing: border-box;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-style: solid;
+  padding: 10px 10px 10px 10px;
+  margin-top: 5px;
+  width: 390px;
+  height: 460px;
+  background: darkorange;
+  color: #fff;
+  /* top: 50%;
+  left: 50%; */
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  box-sizing: border-box;
+}
+.img {
+  border-style: solid;
+  padding: 10px 10px 10px 10px;
+  margin-top: 50px;
+  width: fit-content;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  /* top: 50%;
+  left: 50%; */
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  box-sizing: border-box;
+}

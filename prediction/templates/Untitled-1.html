@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+    <!-- Bootstrap CSS -->
+    {% block style %}
+    {% load static %}
+    <link rel="stylesheet" href={% static "prediction\css\index1.css" %}>
+
+     {% endblock %}
+    
+   
+     {% block content %}
+       
+     
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class="fs-1">Predict Price Of Cotton</p>
+            
+            
+            
+            <br>
+            <div class="img">
+                <img src= {% static "prediction\images\cotton3.jpg" %} class="img-fluid" alt="..." height="420" width="420">
+                <!-- <img src="./css/cotton3.jpg" alt="" width="440px"> -->
+                
+              
+                <p class="solid">India is the largest cotton producing and second largest cotton exporting country.
+                   India accounting about 26% of the world cotton production.It has the distinction of having the 
+                   largest area under cotton cultivation in the world with about 11-12 million hectares and 
+                   constituting about 40% of the world area under cotton cultivation. 
+                   Cotton is a global crop with high price fluctuation, which depends on the global business cycles.
+                    It is a mostly used as raw material for apparel and cloth industry.
+                     In addition to production risk cotton farmers encounter high price risk. 
+                     Thus, it is important to forecast the cotton prices for the benefit of farmers as well as millers 
+                     who purchase the cotton. The present study is aimed to forecast the prices of cotton of major producing states of India.
+                    </p>
+                  </div>
+          </div>
+          <div class="col">
+            <div class="login-box">
+        
+                <h3>Predict MSP Of Cotton</h3>
+                    <form action = "" method = "POST">
+                      {% csrf_token %}
+                        <h4>State:</h4>
+                        <select class="form-select" aria-label="Default select example" name="state">
+                          <option selected>Open this select menu</option>
+                          <option value="0">Orissa</option>
+                          <option value="1">Andhra Pradesh</option>
+                          <option value="2">Tamil Nadu</option>
+                          <option value="3">Madhya Pradesh</option>
+                          <option value="4">Karnataka</option>
+                          <option value="5">Gujarat</option>
+                          <option value="6">Telangana</option>
+                          <option value="7">Punjab</option>
+                          <option value="8">Maharashtra</option>
+                          <option value="9">Haryana</option>
+                          <option value="10">Rajasthan</option>
+                        </select>
+                        <br>  
+                        <h4>Variety:</h4>
+                        <select class="form-select" aria-label="Default select example" name="variety">
+                          <option selected>Open this select menu</option>
+                          <option value="0">J3H</option>
+                          <option value="1">Jayadhar(Unginned)</option>
+                          <option value="2">Jarilla  (Ginned)</option>
+                          <option value="3">Jayadhar (Ginned)</option>
+                          <option value="4">V-797 22mm FIne</option>
+                          <option value="5">CJ 73 22mm FIne</option>
+                          <option value="6">A.K. 235  (Ginned)</option>
+                          <option value="7">Assam Comilla</option>
+                          <option value="8">Jayadhar 23mm-FIne</option>
+                          <option value="9">Kapas (Adoni)</option>
+                          <option value="10">Laxmi (Unginned)'</option>
+                          <option value="11">DIGVIJAY 24mm</option>
+                          <option value="12">Suvin 40mm(F)</option>
+                          <option value="13">F-846</option>
+                          <option value="14">Jayadhar</option>
+                          <option value="15">OnMCU-5 (A) 31mm FInee</option>
+                          
+                          <option value="16">HB6</option>
+                          <option value="17">F-505</option>
+                          <option value="18">H.B  (Ginned)</option>
+                          <option value="19">Mungari (Unginned)</option>
+                          <option value="20">H 420</option>
+                          <option value="21">Farm  (Ginned)</option>
+                          <option value="22">lra (Unginned)</option>
+                          <option value="23">320F</option>
+                          <option value="24">Bengal Deshi (A) FIne</option>
+                          <option value="25">Laxmi</option>
+                          <option value="26">R.G.J-34 24mm-Fine</option>
+                          <option value="27">Farm (Unginned)</option>
+                          <option value="28">A.C. 122- H4</option>
+                          <option value="29">MCU 5</option>
+                          <option value="30">Farm PCG</option>
+                          <option value="31">Jaydhar</option>
+                          <option value="32">Savita</option>
+                          <option value="33">JKH 25</option>
+                          <option value="34">cotton (Ginned)</option>
+                          <option value="35">Mungari  (Ginned)</option>
+                          <option value="36">R-51  (Ginned)</option>
+                          <option value="37">R-51 (Unginned)</option>
+                          <option value="38">Hampi(Unginned)</option>
+                          <option value="39">LRA</option>
+                          <option value="40">LD-491</option>
+                          <option value="41">'Hy-4  (Ginned)</option>
+                          <option value="42">Cotton (Ginned)</option>
+                         <option value="43">Hampi  (Ginned)</option>
+                          <option value="44">N-44</option>
+                          <option value="45">MCU</option>
+                          <option value="46">LD-327</option>
+                          <option value="47">Laxmi  (Ginned)</option>
+                          <option value="48">G-6</option>
+                          <option value="49">Shanker 4 31mm FIne</option>
+                          <option value="50">H4</option>
+                          <option value="51">F-1054</option>
+                          <option value="52">Krishna</option>
+                          <option value="53">CO-2 (Unginned)</option>
+                          <option value="54">CO2  (Ginned)</option>
+                          <option value="55">Varalaxmi</option>
+                          <option value="56">Cotton (Unginned)</option>
+                          <option value="57">Other</option>
+                          <option value="58">GCH</option>
+                          <option value="59">H.Y.4 (Unginned)</option>
+                          <option value="60">LRA  (Ginned)</option>
+                          <option value="61">Y-1</option>
+                          <option value="62">L-K</option>
+                          <option value="63">170-CO2 (Unginned)</option>
+                          <option value="64">Shanker 6 (B) 30mm FIne</option>
+                          <option value="65">Desi</option>
+                          <option value="66">LH-1556</option>
+                          <option value="67">H-4(A) 27mm FIne</option>
+                          <option value="68">MCU-7</option>
+                          <option value="69">170-C2  (Ginned)</option>
+                          <option value="70">Americanne</option>
+                          <option value="71">A.K. 235 (Unginned)</option>
+                          <option value="72">Suyodhar  (Ginned)</option>
+                          <option value="73">Bunny</option>
+                          <option value="74">Varalakshmi  (Ginned)</option>
+                          <option value="75">DCH-32  (Ginned)</option>
+                          <option value="76">H.B (Unginned)</option>
+                          <option value="77">Cotton US</option>
+                          <option value="78">Local</option>
+                          <option value="79">L 147</option>
+                          <option value="80">PCO2</option>
+                          <option value="81">RCH-2</option>
+                          <option value="82">A-51-9 24mm. FIne</option>
+                          <option value="83">MECH-1</option>
+                          <option value="84">Narma BT Cotton</option>
+                          <option value="85">Mahico</option>
+                          <option value="86">DCH-32(Unginned)</option>
+                          <option value="87">J-34</option>
+                          <option value="88">H-6</option>
+                          <option value="89">Bramha</option>
+                          <option value="90">Aka-1 (Unginned)</option>
+                          <option value="91">Surabi</option>
+                        </select>
+                        <br>
+                        <h4>Year:</h4>
+                        <select class="form-select" aria-label="Default select example" name="year">
+                          <option selected>Open this select menu</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                          <option value="2017">2017</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                        </select>
+                        <br>
+    
+                        <h4>Month :</h4>
+                        <select class="form-select" aria-label="Default select example" name="month">
+                          <option selected>Open this select menu</option>
+                          <option value="1">Jan</option>
+                          <option value="2">Feb</option>
+                          <option value="3">March</option>
+                          <option value="2">April</option>
+                          <option value="2">May</option>
+                          <option value="2">June</option>
+                          <option value="2">July</option>
+                          <option value="2">Aug</option>
+                          <option value="2">Sep</option>
+                          <option value="2">Oct</option>
+                          <option value="2">Nov</option>
+                          <option value="2">Dec</option>
+                        </select>
+                        <br>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="submit">Predict</button>
+                    
+                    </form>
+                
+                
+                </div>
+          </div>
+
+          {% endblock %}
+
+    

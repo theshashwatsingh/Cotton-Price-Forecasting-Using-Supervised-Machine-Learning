@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+    <!-- Bootstrap CSS -->
+    {% block style %}
+    {% load static %}
+    <link rel="stylesheet" href={% static "prediction\css\styleLogIn.css" %}>
+
+     {% endblock %}
+     
+        
+   
+     {% block content %}
+     <div class="login-box">
+        <img src={% static "prediction\images\avatar.png" %} class="avatar">
+            <h1>Login Here</h1>
+                <form>
+                <p>Username</p>
+                <input type="text" name="username" placeholder="Enter Username">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+                <input type="submit" name="submit" value="Login">
+                <br>
+                <a href="./SignUp.html"><button class="btn btn-primary" type="button">New User: SignUp</button></a> 
+                <br>
+                <br>
+                <a href="#">Forget Password</a>
+                
+                   
+                </form>
+            
+            
+            </div>
+     {% endblock %}
+
+       

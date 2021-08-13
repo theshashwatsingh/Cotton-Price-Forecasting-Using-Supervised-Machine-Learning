@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+
+<!-- Bootstrap CSS -->
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href={% static "prediction\css\stylehelp.css" %}>
+  
+
+{% endblock %}
+
+
+
+{% block content %}
+<table class="table table-borderless" style=" width: 75%; margin: auto; margin-top: 50px;">
+    {% for file in download_files %}
+    
+    <tr>
+    <td style="font-size:25px;">{{file.file_name}} </td>
+    <!-- <td><button ><a href ='{{file.file_data.url}}' download></a> Click here to download</button> </td> -->
+      <td> <button type="button" style = "background-color: #0B5ED7"  class="btn btn-info"><a style = "color: #FFF" href ='{{file.file_data.url}}' download >Download</a></button></td>    
+</tr>
+    {% endfor %}
+    
+    </table>
+    <center>
+	<br>
+	<br>
+	<br>
+	Actual and Predicted Price <br>
+	<br>
+	<br>
+	<br>
+          <img src= {% static "prediction\images\download.png" %} class="img-fluid" alt="..." height="50%" width="50%"></center>
+ 
+
+    
+
+{% endblock %}
